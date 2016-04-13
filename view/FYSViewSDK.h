@@ -23,7 +23,25 @@ typedef enum : NSUInteger {
 @property (nonatomic , assign) CGFloat side;
 @property (nonatomic , assign) CGFloat location;
 @property (nonatomic , assign) MaskType FYS_Type;
+/**
+ *  创建遮罩视图 
+ *
+ *  @param frame
+ *
+ *  @return
+ */
 - (id)initWithFrame:(CGRect)frame;
+/**
+ *  创建遮罩视图
+ *
+ *  @param frame    视图的frame
+ *  @param radius   圆角
+ *  @param side     三角形的边长，这是一个正三角形
+ *  @param location 三角形的左点距视图的左、上的距离
+ *  @param type     三角形的位置 上、左、下、右
+ *
+ *  @return
+ */
 - (id)initWithFrame:(CGRect)frame cornerRadius:(CGFloat)radius side:(CGFloat)side location:(CGFloat)location maskType:(MaskType)type;
 @end
 #endif /* FYSViewSDK_h */
